@@ -11,17 +11,18 @@ import('angular-sanitize');
 import('angular-ui-router');
 
 import homePage from './angularjs/home/home.module';
-import { ArticleListComponent } from './article/article-list/article-list.component';
+import { ArticleModule, angularjsAppArticle } from './article/article.module';
 
 declare var angular: angular.IAngularStatic;
 
 @NgModule({
   declarations: [
     // AppComponent
-  ArticleListComponent],
+  ],
   imports: [
     BrowserModule,
-    UpgradeModule
+    UpgradeModule,
+    ArticleModule
   ],
   providers: [],
   // bootstrap: [AppComponent]
@@ -35,5 +36,6 @@ export class AppModule {
 
 angular
   .module('angularjsApp', [
-    homePage
+    angularjsAppArticle,
+    homePage,
   ]);
