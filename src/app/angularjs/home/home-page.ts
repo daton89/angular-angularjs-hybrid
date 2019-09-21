@@ -1,6 +1,9 @@
+const angularLogo = require('assets/images/angular-logo.png');
+export class HomePage {
+  angularLogo: any;
 
-export default class HomePage {
-
-  constructor() {}
+  constructor() {
+    this.angularLogo = angularLogo;
+  }
 
 }
