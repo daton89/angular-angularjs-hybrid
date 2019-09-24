@@ -12,6 +12,7 @@ import('angular-ui-router');
 
 import homePage from './angularjs/home/home.module';
 import { ArticleModule, angularjsAppArticle } from './article/article.module';
+import { SharedService } from 'shared/shared.service';
 
 declare var angular: angular.IAngularStatic;
 
@@ -24,7 +25,9 @@ declare var angular: angular.IAngularStatic;
     UpgradeModule,
     ArticleModule
   ],
-  providers: [],
+  providers: [
+    SharedService
+  ],
   // bootstrap: [AppComponent]
 })
 export class AppModule {
